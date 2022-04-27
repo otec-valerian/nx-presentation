@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "command-center": "apps/command-center",
+    "command-center-e2e": "apps/command-center-e2e"
+  }
+}
