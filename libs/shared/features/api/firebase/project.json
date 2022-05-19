@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/features/api/firebase",
+  "sourceRoot": "libs/shared/features/api/firebase/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/features/api/firebase"],
+      "options": {
+        "jestConfig": "libs/shared/features/api/firebase/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/features/api/firebase/**/*.ts",
+          "libs/shared/features/api/firebase/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

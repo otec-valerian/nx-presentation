@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/command-center/features/api/auth",
+  "sourceRoot": "libs/command-center/features/api/auth/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/command-center/features/api/auth"],
+      "options": {
+        "jestConfig": "libs/command-center/features/api/auth/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/command-center/features/api/auth/**/*.ts",
+          "libs/command-center/features/api/auth/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

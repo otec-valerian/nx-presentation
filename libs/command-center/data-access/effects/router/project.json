@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/command-center/data-access/effects/router",
+  "sourceRoot": "libs/command-center/data-access/effects/router/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/command-center/data-access/effects/router"],
+      "options": {
+        "jestConfig": "libs/command-center/data-access/effects/router/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/command-center/data-access/effects/router/**/*.ts",
+          "libs/command-center/data-access/effects/router/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/command-center/utils/guards/auth-guard",
+  "sourceRoot": "libs/command-center/utils/guards/auth-guard/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/command-center/utils/guards/auth-guard"],
+      "options": {
+        "jestConfig": "libs/command-center/utils/guards/auth-guard/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/command-center/utils/guards/auth-guard/**/*.ts",
+          "libs/command-center/utils/guards/auth-guard/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/features/api/domain-types",
+  "sourceRoot": "libs/shared/features/api/domain-types/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/features/api/domain-types"],
+      "options": {
+        "jestConfig": "libs/shared/features/api/domain-types/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/features/api/domain-types/**/*.ts",
+          "libs/shared/features/api/domain-types/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

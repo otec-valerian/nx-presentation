@@ -2,6 +2,17 @@
   "version": 2,
   "projects": {
     "command-center": "apps/command-center",
-    "command-center-e2e": "apps/command-center-e2e"
+    "command-center-data-access-auth-state": "libs/command-center/data-access/states/auth",
+    "command-center-data-access-effects-auth-effects": "libs/command-center/data-access/effects/auth",
+    "command-center-data-access-router-effects": "libs/command-center/data-access/effects/router",
+    "command-center-e2e": "apps/command-center-e2e",
+    "command-center-features-api-auth": "libs/command-center/features/api/auth",
+    "command-center-features-pages-login-page": "libs/command-center/features/pages/login-page",
+    "command-center-features-pages-main-page": "libs/command-center/features/pages/main-page",
+    "command-center-utils-guards-auth-guard": "libs/command-center/utils/guards/auth-guard",
+    "command-center-utils-guards-init-guard": "libs/command-center/utils/guards/init-guard",
+    "command-center-utils-guards-public-guard": "libs/command-center/utils/guards/public-guard",
+    "shared-features-api-domain-types": "libs/shared/features/api/domain-types",
+    "shared-features-api-firebase": "libs/shared/features/api/firebase"
   }
 }
