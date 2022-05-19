@@ -4,11 +4,25 @@
   "sourceRoot": "apps/command-center/src",
   "prefix": "nx-presentation",
   "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "nx run command-center:build"
+          },
+          {
+            "command": "firebase deploy --config apps/command-center/firebase.json"
+          }
+        ],
+        "parallel": false
+      }
+    },
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/command-center",
+        "outputPath": "apps/command-center/dist/command-center",
         "index": "apps/command-center/src/index.html",
         "main": "apps/command-center/src/main.ts",
         "polyfills": "apps/command-center/src/polyfills.ts",
