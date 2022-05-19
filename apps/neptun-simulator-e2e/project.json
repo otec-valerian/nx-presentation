@@ -1,0 +1,28 @@
+{
+  "root": "apps/neptun-simulator-e2e",
+  "sourceRoot": "apps/neptun-simulator-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/neptun-simulator-e2e/cypress.json",
+        "devServerTarget": "neptun-simulator:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "neptun-simulator:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/neptun-simulator-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["neptun-simulator"]
+}

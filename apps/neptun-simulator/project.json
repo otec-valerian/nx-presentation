@@ -1,24 +1,24 @@
 {
   "projectType": "application",
-  "root": "apps/command-center",
-  "sourceRoot": "apps/command-center/src",
+  "root": "apps/neptun-simulator",
+  "sourceRoot": "apps/neptun-simulator/src",
   "prefix": "nx-presentation",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/command-center",
-        "index": "apps/command-center/src/index.html",
-        "main": "apps/command-center/src/main.ts",
-        "polyfills": "apps/command-center/src/polyfills.ts",
-        "tsConfig": "apps/command-center/tsconfig.app.json",
+        "outputPath": "dist/apps/neptun-simulator",
+        "index": "apps/neptun-simulator/src/index.html",
+        "main": "apps/neptun-simulator/src/main.ts",
+        "polyfills": "apps/neptun-simulator/src/polyfills.ts",
+        "tsConfig": "apps/neptun-simulator/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/command-center/src/favicon.ico",
-          "apps/command-center/src/assets"
+          "apps/neptun-simulator/src/favicon.ico",
+          "apps/neptun-simulator/src/assets"
         ],
-        "styles": ["apps/command-center/src/styles.scss"],
+        "styles": ["apps/neptun-simulator/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -37,8 +37,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/command-center/src/environments/environment.ts",
-              "with": "apps/command-center/src/environments/environment.prod.ts"
+              "replace": "apps/neptun-simulator/src/environments/environment.ts",
+              "with": "apps/neptun-simulator/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -58,10 +58,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "command-center:build:production"
+          "browserTarget": "neptun-simulator:build:production"
         },
         "development": {
-          "browserTarget": "command-center:build:development"
+          "browserTarget": "neptun-simulator:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,30 +69,24 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "command-center:build"
+        "browserTarget": "neptun-simulator:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/command-center/**/*.ts",
-          "apps/command-center/**/*.html"
+          "apps/neptun-simulator/**/*.ts",
+          "apps/neptun-simulator/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/command-center"],
+      "outputs": ["coverage/apps/neptun-simulator"],
       "options": {
-        "jestConfig": "apps/command-center/jest.config.ts",
+        "jestConfig": "apps/neptun-simulator/jest.config.ts",
         "passWithNoTests": true
-      }
-    },
-    "firebase": {
-      "executor": "@nxtend/firebase:firebase",
-      "options": {
-        "cmd": "--help"
       }
     }
   },

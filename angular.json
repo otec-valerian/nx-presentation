@@ -12,6 +12,8 @@
     "command-center-utils-guards-auth-guard": "libs/command-center/utils/guards/auth-guard",
     "command-center-utils-guards-init-guard": "libs/command-center/utils/guards/init-guard",
     "command-center-utils-guards-public-guard": "libs/command-center/utils/guards/public-guard",
+    "neptun-simulator": "apps/neptun-simulator",
+    "neptun-simulator-e2e": "apps/neptun-simulator-e2e",
     "shared-features-api-domain-types": "libs/shared/features/api/domain-types",
     "shared-features-api-firebase": "libs/shared/features/api/firebase"
   }
