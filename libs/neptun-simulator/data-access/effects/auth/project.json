@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/neptun-simulator/data-access/effects/auth",
+  "sourceRoot": "libs/neptun-simulator/data-access/effects/auth/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/neptun-simulator/data-access/effects/auth"],
+      "options": {
+        "jestConfig": "libs/neptun-simulator/data-access/effects/auth/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/neptun-simulator/data-access/effects/auth/**/*.ts",
+          "libs/neptun-simulator/data-access/effects/auth/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

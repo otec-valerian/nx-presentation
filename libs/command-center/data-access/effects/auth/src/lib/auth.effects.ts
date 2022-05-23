@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {createEffect, Actions, ofType} from '@ngrx/effects';
 import {fetch} from '@nrwl/angular';
-import * as AuthActions from '../../../../states/auth/src/lib/+state/auth.actions';
+import {AuthActions} from '@nx-presentation/command-center/data-access/auth-state';
 import {map} from "rxjs";
 import {AuthService} from "@nx-presentation/command-center/features/api/auth";
+import {CommonUtil} from "@nx-presentation/shared/utils/common-util";
 
 @Injectable()
 export class AuthEffects {
@@ -14,11 +15,10 @@ export class AuthEffects {
       fetch({
         run: () => {
           console.log('start init')
-          // Your custom service 'load' logic goes here. For now just return a success action...
           return this.authService.getUser().pipe(
             map(user => {
               console.log(user, 'success init')
-              const userCopy = JSON.parse(JSON.stringify(user))
+              const userCopy = this.commonUtil.getDeepCopy(user);
               return AuthActions.initAuthSuccess({authUser: userCopy})
             })
           );
@@ -39,7 +39,7 @@ export class AuthEffects {
           console.log('in auth effect')
           return this.authService.emailSignUp(req).pipe(
             map(({user}) => {
-              const userCopy = JSON.parse(JSON.stringify(user))
+              const userCopy = this.commonUtil.getDeepCopy(user);
               return AuthActions.authUserSuccess({authUser: userCopy})
             })
           )
@@ -90,6 +90,7 @@ export class AuthEffects {
   )
 
   constructor(private readonly actions$: Actions,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private commonUtil: CommonUtil) {
   }
 }

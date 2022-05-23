@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
-import {ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree} from "@angular/router";
-import {filter, map, mergeMap, Observable, of, switchMap} from "rxjs";
+import { CanActivate, UrlTree} from "@angular/router";
+import {filter, mergeMap, Observable, of, switchMap} from "rxjs";
 import firebase from "firebase/compat";
 import {AuthFacade} from "@nx-presentation/command-center/data-access/auth-state";
 

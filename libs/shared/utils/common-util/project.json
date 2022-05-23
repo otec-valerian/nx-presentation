@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/utils/common-util",
+  "sourceRoot": "libs/shared/utils/common-util/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/utils/common-util"],
+      "options": {
+        "jestConfig": "libs/shared/utils/common-util/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/utils/common-util/**/*.ts",
+          "libs/shared/utils/common-util/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

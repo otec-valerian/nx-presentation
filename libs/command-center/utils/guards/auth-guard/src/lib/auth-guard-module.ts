@@ -1,8 +1,5 @@
 import {NgModule} from "@angular/core";
-import {
-  AuthFacade,
-  CommandCenterDataAccessAuthStateModule
-} from "@nx-presentation/command-center/data-access/auth-state";
+import {CommandCenterDataAccessAuthStateModule} from "@nx-presentation/command-center/data-access/auth-state";
 import {AuthGuard} from "./auth-guard";
 
 @NgModule({
@@ -11,8 +8,7 @@ import {AuthGuard} from "./auth-guard";
   ],
   declarations: [],
   providers: [
-    AuthGuard,
-    AuthFacade
+    AuthGuard
   ]
 })
 

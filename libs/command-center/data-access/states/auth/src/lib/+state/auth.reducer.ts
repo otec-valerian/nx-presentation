@@ -1,9 +1,5 @@
-import {EntityState, EntityAdapter, createEntityAdapter} from '@ngrx/entity';
 import {createReducer, on, Action} from '@ngrx/store';
-
 import * as AuthActions from './auth.actions';
-import {AuthEntity} from './auth.models';
-import {IUser} from "../../../../../../features/api/auth/src/lib/DTO/IUser";
 import {IError} from "@nx-presentation/shared/features/api/domain-types";
 import firebase from "firebase/compat";
 
@@ -23,7 +19,11 @@ export const initialState: State = {
 
 const authReducer = createReducer(
   initialState,
-  on(AuthActions.init, (state) => ({...state, loaded: false, error: null})),
+  on(AuthActions.init, (state) => ({
+    ...state,
+    loaded: false,
+    error: null
+  })),
   on(AuthActions.initAuthSuccess, (state, {authUser}) => ({
     ...state,
     loaded: true,

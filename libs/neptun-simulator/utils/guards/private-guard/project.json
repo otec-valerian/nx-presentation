@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/neptun-simulator/utils/guards/private-guard",
+  "sourceRoot": "libs/neptun-simulator/utils/guards/private-guard/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/neptun-simulator/utils/guards/private-guard"],
+      "options": {
+        "jestConfig": "libs/neptun-simulator/utils/guards/private-guard/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/neptun-simulator/utils/guards/private-guard/**/*.ts",
+          "libs/neptun-simulator/utils/guards/private-guard/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

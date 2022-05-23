@@ -1,8 +1,7 @@
 import { createAction, props } from '@ngrx/store';
-import {ISuccessAuthResponse} from "../../../../../../features/api/auth/src/lib/DTO/ISuccessAuthResponse";
 import {IError} from "@nx-presentation/shared/features/api/domain-types";
 import firebase from "firebase/compat";
-import {IFbAuthRequest} from "../../../../../../../shared/features/api/firebase/src/lib/DTO/IFbAuthRequest";
+import {IFbAuthRequest} from "@nx-presentation/shared/features/api/firebase";
 
 export const init = createAction('[Auth] Init');
 

@@ -42,11 +42,47 @@
       "@nx-presentation/command-center/utils/guards/public-guard": [
         "libs/command-center/utils/guards/public-guard/src/index.ts"
       ],
+      "@nx-presentation/neptun-simulator/data-access/effects/auth": [
+        "libs/neptun-simulator/data-access/effects/auth/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/data-access/effects/init": [
+        "libs/neptun-simulator/data-access/effects/init/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/data-access/effects/router": [
+        "libs/neptun-simulator/data-access/effects/router/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/data-access/states/auth": [
+        "libs/neptun-simulator/data-access/states/auth/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/data-access/states/init": [
+        "libs/neptun-simulator/data-access/states/init/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/features/api/auth": [
+        "libs/neptun-simulator/features/api/auth/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/features/pages/login-page": [
+        "libs/neptun-simulator/features/pages/login-page/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/features/pages/main-page": [
+        "libs/neptun-simulator/features/pages/main-page/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/utils/guards/init-guard": [
+        "libs/neptun-simulator/utils/guards/init-guard/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/utils/guards/private-guard": [
+        "libs/neptun-simulator/utils/guards/private-guard/src/index.ts"
+      ],
+      "@nx-presentation/neptun-simulator/utils/guards/public-guard": [
+        "libs/neptun-simulator/utils/guards/public-guard/src/index.ts"
+      ],
       "@nx-presentation/shared/features/api/domain-types": [
         "libs/shared/features/api/domain-types/src/index.ts"
       ],
       "@nx-presentation/shared/features/api/firebase": [
         "libs/shared/features/api/firebase/src/index.ts"
+      ],
+      "@nx-presentation/shared/utils/common-util": [
+        "libs/shared/utils/common-util/src/index.ts"
       ]
     }
   },

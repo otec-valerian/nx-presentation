@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {EffectsModule} from "@ngrx/effects";
 import {AuthEffects} from "./auth.effects";
 import {CommandCenterFeaturesApiAuthModule} from "@nx-presentation/command-center/features/api/auth";
+import {SharedUtilsCommonUtilModule} from "@nx-presentation/shared/utils/common-util";
 
 
 @NgModule({
   imports: [
-    CommonModule,
     EffectsModule.forFeature([AuthEffects]),
-    CommandCenterFeaturesApiAuthModule
+    CommandCenterFeaturesApiAuthModule,
+    SharedUtilsCommonUtilModule
   ],
 })
 export class CommandCenterDataAccessEffectsAuthEffectsModule {}

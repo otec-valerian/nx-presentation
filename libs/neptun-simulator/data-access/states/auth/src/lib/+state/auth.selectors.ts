@@ -1,0 +1,19 @@
+import {createFeatureSelector, createSelector} from "@ngrx/store";
+import {NEPTUN_SIMULATOR_AUTH_FEATURE_KEY, State} from "./auth.reducer";
+
+export const getAuthState = createFeatureSelector<State>(NEPTUN_SIMULATOR_AUTH_FEATURE_KEY);
+
+export const getAuthLoaded = createSelector(
+  getAuthState,
+  (state: State) => state.loaded
+);
+
+export const getAuthError = createSelector(
+  getAuthState,
+  (state: State) => state.error
+);
+
+export const getSelected = createSelector(
+  getAuthState,
+  (state: State) => (state.authorizedUser)
+);

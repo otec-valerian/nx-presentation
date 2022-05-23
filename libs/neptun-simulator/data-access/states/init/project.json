@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/neptun-simulator/data-access/states/init",
+  "sourceRoot": "libs/neptun-simulator/data-access/states/init/src",
+  "prefix": "nx-presentation",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/neptun-simulator/data-access/states/init"],
+      "options": {
+        "jestConfig": "libs/neptun-simulator/data-access/states/init/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/neptun-simulator/data-access/states/init/**/*.ts",
+          "libs/neptun-simulator/data-access/states/init/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
